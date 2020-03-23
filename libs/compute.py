@@ -21,9 +21,9 @@ def data_loader():
     trainset_1_gt = torchvision.datasets.ImageFolder(root='./images_LR/Expert-C/Training1/', transform=transform)
     trainset_2_gt = torchvision.datasets.ImageFolder(root='./images_LR/Expert-C/Training2/', transform=transform)
 
-    testset_inp = torchvision.datasets.ImageFolder(root='./images_LR/input/Testing/', transform=transform)
-    trainset_1_inp = torchvision.datasets.ImageFolder(root='./images_LR/input/Training1/', transform=transform)
-    trainset_2_inp = torchvision.datasets.ImageFolder(root='./images_LR/input/Training2/', transform=transform)
+    testset_inp = torchvision.datasets.ImageFolder(root='./images_LR/data/Testing/', transform=transform)
+    trainset_1_inp = torchvision.datasets.ImageFolder(root='./images_LR/data/Training1/', transform=transform)
+    trainset_2_inp = torchvision.datasets.ImageFolder(root='./images_LR/data/Training2/', transform=transform)
 
     train_loader_1 = torch.utils.data.DataLoader(
         ConcatDataset(
